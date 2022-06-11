@@ -100,7 +100,8 @@ def new(dataset_id, resource_id=None):
         #                logic.parse_params(request.params))))
         data_dict.update({
             'title': request.form.get('title'),
-            'description': request.form.get('description')
+            'description': request.form.get('description'),
+            'assignee_id': dataset_dict['creator_user_id']
             })
 
         if not data_dict['title']:
