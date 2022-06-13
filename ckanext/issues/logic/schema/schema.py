@@ -33,6 +33,7 @@ def issue_create_schema():
     return {
         'title': [not_missing],
         'description': [ignore_missing],
+        'assignee_id': [ignore_missing, user_exists],
         'dataset_id': [not_missing, package_exists, as_package_id],
     }
 
